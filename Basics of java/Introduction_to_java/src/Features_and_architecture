@@ -1,0 +1,21 @@
+Why java is -
+1.Simple: Java is a very simple language, because its syntax is similar to C and C++. It removes some of the complicated syntax related things like pointers. In java garbage collector does garbage collection so developer can invest more time on logic.
+2.Secure: Java is a very secure as it does not have pointers so we can not access the memory directly and also it run on JVM not on the os directly.
+3.Portable: Java program is first compiled into an intermediate byte code which can be executed on any operating system as this byte code require a JVM to run on and each operating system have their on JVM.
+4. Robust: Java uses very strong memory management, it has automatic garbage collection and remove the pointers for security purpose and it also has concept of exception handling. All this features make java robust.
+5.Architecture-Neutral:Java is architecture neutral because there are no implementation dependent features, for example, the size of primitive types is fixed.
+                       In C programming, int data type occupies 2 bytes of memory for 32-bit architecture and 4 bytes of memory for 64-bit architecture. However, it occupies 4 bytes of memory for both 32 and 64-bit architectures in Java.
+6.High-Performance:Java offers high performance as it uses the JIT (Just In Time) compiler. The compiler only compiles that method which is being called. The JIT enhances the performance of interpreting byte code by caching interpretations.
+7. Distributed:Java is Distributed Language Means because the program of java is compiled onto one machine can be easily transferred to machine and Executes them on another machine because facility of Bytes Codes So java is Specially designed For Internet Users which uses the Remote Computers For Executing their Programs on local machine after transferring the Programs from Remote Computers or either from the internet.
+8.Dynamic:Java is considered to be more dynamic than C or C++ since it is designed to adapt to an evolving environment. Java programs can carry an extensive amount of run-time information that can be used to verify and resolve accesses to objects at run-time.
+
+
+What happen when we remove static from the main method?
+
+JVM calls the main method when we the run the file. We run the file with the name of the class in which the main method is present. JVM need to call the main method. Now JVM should not make the object of the class first and then call the main method with it.
+So we make the main method static so that it can be called with the class name directly. If we remove the static variable from main we can not run the program
+
+Find out what happens when the filename is different than the class name in the file?
+
+The filename must have the same name as the public class name in that file, which is the way to tell the JVM that this is an entry point.
+Suppose when we create a program in which more than one class resides and after compiling a java source file, it will generate the same number of the .class file as classes reside in our program. In this condition, we will not able to easily identify which class need to interpret by java interpreter and which class containing Entry point for the program
