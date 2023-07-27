@@ -11,10 +11,10 @@ public class ReplaceVowel {
         String str=scan.next();
         System.out.println("Enter a character");
         char ch=scan.next().charAt(0);
-        StringManipulate obj=( String st,char c)->{
+        StringManipulate obj= (String st,char c)->{
             String result="";
             for(int i=0;i<st.length();i++){
-                if(st.charAt(i)=='a'||st.charAt(i)=='e'||st.charAt(i)=='i'||st.charAt(i)=='o'||st.charAt(i)=='u')
+                if(st.charAt(i)=='a'||st.charAt(i)=='e'||st.charAt(i)=='i'||st.charAt(i)=='o'||st.charAt(i)=='u'||st.charAt(i)=='A'||st.charAt(i)=='E' ||st.charAt(i)=='I'||st.charAt(i)=='O'||st.charAt(i)=='U')
                     result=result.concat(String.valueOf('#'));
                 else
                     result=result.concat(String.valueOf(st.charAt(i)));
