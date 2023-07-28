@@ -1,5 +1,5 @@
 package JavaInputOutput;
-
+//Write a Java program to get a list of all file/directory names from the directory: C://Documents.
 import java.io.File;
 
 public class ListFileName {
