@@ -2,6 +2,7 @@ package CollectionTask.MapTask;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 /*
 Given an integer representing the threshold size, write a method which would print all the
@@ -11,7 +12,8 @@ elements in the map.
  */
 public class CheckThreshold {
     public static void main(String[]args){
-        int threshold=4;
+        Scanner scanner=new Scanner(System.in);
+        int threshold=10;
         HashMap<Integer,Integer> map=new HashMap<>();
         map.put(1,2);
         map.put(3,4);
@@ -24,7 +26,20 @@ public class CheckThreshold {
         }
         if(map.size()>=threshold)
             map.clear();
+
+        System.out.println("Enter the key to add to map");
+        int key=scanner.nextInt();
+        System.out.println("Enter the value");
+        int value=scanner.nextInt();
+        CheckThreshold ct=new CheckThreshold();
+        ct.addElements(map,key,value);
     }
-    public static class addElements{
+    public void addElements(HashMap<Integer,Integer> map,int key,int value){
+        map.put(key,value);
+        for(Map.Entry<Integer,Integer> entry:map.entrySet()){
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+
     }
+
 }
