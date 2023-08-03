@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Registration Page</title>
+        <link rel="stylesheet" href="StyleSheet.css">
+        
+    </head>
+    <body>
+        <div class="big-container">
+        <div class="container">
+            <form action="" method="post">
+                <h2>Registration</h2>
+                <div class="content">
+                    <div class="input-box">
+                        <label for="name">Full Name</label>
+                        <input type="text" placeholder="Enter your name" id="name" >
+                    </div>
+                    <div class="input-box">
+                        <label for="Username">Username</label>
+                        <input type="text" placeholder="Enter your username" id="username" >
+                    </div>
+                    <div class="input-box">
+                        <label for="Email">Email</label>
+                        <input type="email" placeholder="Enter your email" id="email" >
+                    </div>
+                    <div class="input-box">
+                        <label for="phonenumber">Phone Number</label>
+                        <input type="tel" pattern="[789][0-9]{9}"placeholder="Enter phone number" id="phonenumber" >
+                    </div>
+                    <div class="input-box">
+                        <label for="Password">Password</label>
+                        <input type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" placeholder="Enter your password" name="password" id="password" >
+                    </div>
+                    <div class="input-box">
+                        <label for="confirmpassword">Confirm Password</label>
+                        <input type="password" placeholder="Confirm Password" name="confirmpassword" id="confirmpassword" >
+                    </div>
+                    <span class="gender-title">Gender</span>
+                    <div class="gender-category">
+                        <input type="radio" name="gender" id="male">
+                        <label for="gender">Male</label>
+                        <input type="radio" name="gender" id="female">
+                        <label for="gender">Female</label>
+                        <input type="radio" name="gender" id="Prefernottosay">
+                        <label for="gender">Prefer not to say</label>
+                    </div>
+                </div>
+                <div class ="button-container">
+                    <button type="submit" onclick="validateForm()">Register</button>
+                </div>
+            </form>
+        </div>
+        </div>
+    </body>
+    <script type="text/javascript">  
+        function validateForm() {  
+
+          var name=document.getElementById("name").value;
+          if(name=="")
+          alert("Name is required");
+          var username=document.getElementById("username").value;
+          if(username=="")
+          alert("User name is required");
+          var email=document.getElementById("email").value;
+          if(email=="")
+          alert("Email is required");
+          var phonenumber =document.getElementById("phonenumber").value;
+          if(phonenumber=="")
+          alert("Phone Number is required");
+          var password =document.getElementById("password").value;
+          if(password=="")
+          alert("password is required");
+          var confirmpassword =document.getElementById("confirmpassword").value;
+          if(confirmpassword=="")
+          alert("Please reenter the password");
+          var ele = document.getElementsByName('gender');
+ let i=0;
+ for (i = 0; i < ele.length; i++) {
+     if (ele[i].checked)
+        continue;
+ }
+ if(i==ele.length)
+ alert("Gender is required");
+          if(!password==""&& !confirmpassword=="")
+{
+           if( pw1 != pw2)  
+          {   
+            alert("Passwords did not match");  
+          } else {  
+            alert("Registration Successful");  
+          }  
+        
+    } 
+}
+        </script>  
+</html>
