@@ -19,7 +19,7 @@ public class StringTask {
         System.out.println("Enter 20 String elements");
  //..............................................................................
         //Adding elements in set;
-       while(set.size()!=5){
+       while(set.size()!=20){
             set.add(scanner.next());
         }
         System.out.println(set);

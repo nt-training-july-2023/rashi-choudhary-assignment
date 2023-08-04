@@ -1,0 +1,23 @@
+APIs:
+
+ @GetMapping("/Employees"): To display All the employees present in the database;
+
+ @GetMapping("/Employee/{id}") : To display Employee having that specific id;
+
+ @PostMapping("/Employees") : To post or enter Employee in database;
+
+ @PutMapping("/Employee") : To update information of Employee;
+
+ @DeleteMapping("/Employee/{id}") : To delete employee having that specific id;
+
+ {
+     "empId":"N0137",
+     "name":"Rashi Choudhary",
+     "address":"Keshripura Sanwer",
+     "role":"Engineer",
+     "email":"rashichoudhary404@gmail.com",
+     "salary":45000
+ }
+
+
+
